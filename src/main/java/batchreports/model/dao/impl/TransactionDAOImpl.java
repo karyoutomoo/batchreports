@@ -29,7 +29,7 @@ public class TransactionDAOImpl extends JdbcDaoSupport implements TransactionDAO
 	}
 	
 	@Override
-	public void insert(List<? extends Transaction> Transactions) {
+	public void insert(final List<? extends Transaction> Transactions) {
 		String sql = "INSERT INTO transactions " + "(id, buyer, store, item, price) VALUES (?, ?, ?, ?, ?)";
 		getJdbcTemplate().batchUpdate(sql, new BatchPreparedStatementSetter() {
 			public void setValues(PreparedStatement ps, int i) throws SQLException {
