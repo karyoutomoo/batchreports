@@ -37,8 +37,8 @@ public class TransactionDAOImpl extends JdbcDaoSupport implements TransactionDAO
 				ps.setLong(1, transaction.getId());
 				ps.setString(2, transaction.getBuyer());
 				ps.setString(3, transaction.getStore());
-				ps.setString(3, transaction.getItem());
-				ps.setLong(4, transaction.getPrice());
+				ps.setString(4, transaction.getItem());
+				ps.setLong(5, transaction.getPrice());
 			}
  
 			public int getBatchSize() {

@@ -18,6 +18,13 @@ public class Transaction {
 		this.price=price;
 	}
 	
+	public Transaction(Long id, String buyer, String store, String item) {
+		this.id=id;
+		this.buyer=buyer;
+		this.store=store;
+		this.item=item;
+	}
+	
 	public Long getId() {
 		return id;
 	}
