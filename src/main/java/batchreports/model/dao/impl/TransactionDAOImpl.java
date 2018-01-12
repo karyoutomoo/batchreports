@@ -38,7 +38,7 @@ public class TransactionDAOImpl extends JdbcDaoSupport implements TransactionDAO
 				ps.setString(2, transaction.getBuyer());
 				ps.setString(3, transaction.getStore());
 				ps.setString(4, transaction.getItem());
-				ps.setLong(5, transaction.getPrice());
+				ps.setString(5, transaction.getPrice());
 			}
  
 			public int getBatchSize() {
@@ -55,11 +55,11 @@ public class TransactionDAOImpl extends JdbcDaoSupport implements TransactionDAO
 		List<Transaction> result = new ArrayList<Transaction>();
 		for (Map<String, Object> row : rows) {
 			Transaction transaction = new Transaction();
-			transaction.setId((Long) row.get("id"));
+			transaction.setId((Integer) row.get("id"));
 			transaction.setBuyer((String) row.get("buyer"));
 			transaction.setStore((String) row.get("store"));
 			transaction.setItem((String) row.get("item"));
-			transaction.setPrice((Long) row.get("price"));
+			transaction.setPrice((String) row.get("price"));
 			result.add(transaction);
 		}
  

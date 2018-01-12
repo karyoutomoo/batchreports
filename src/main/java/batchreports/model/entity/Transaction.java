@@ -1,35 +1,26 @@
 package batchreports.model.entity;
 
 public class Transaction {
-	private Long id;
+	private Integer id;
 	private String buyer;
 	private String store;
 	private String item;
-	private Long price;
+	private String price;
 	
 	public Transaction() {
 	}
- 
-	public Transaction(Long id, String buyer, String store, String item, Long price) {
-		this.id=id;
-		this.buyer=buyer;
-		this.store=store;
-		this.item=item;
-		this.price=price;
-	}
 	
-	public Transaction(Long id, String buyer, String store, String item) {
-		this.id=id;
+	public Transaction(String buyer, String store, String item) {
 		this.buyer=buyer;
 		this.store=store;
 		this.item=item;
 	}
 	
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -57,11 +48,11 @@ public class Transaction {
 		this.item = item;
 	}
 
-	public Long getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(Long price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 
