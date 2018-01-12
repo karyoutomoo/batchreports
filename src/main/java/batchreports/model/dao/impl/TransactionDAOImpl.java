@@ -13,11 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import batchreports.model.dao.TransactionDAO;
 import batchreports.model.entity.Transaction;
 
 @Repository
+@Service
 public class TransactionDAOImpl extends JdbcDaoSupport implements TransactionDAO{
 
 	@Autowired
